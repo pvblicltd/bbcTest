@@ -7,4 +7,5 @@ Please create a page (or a “widget” that we can embed into other pages) wher
 ## Process
 
 1. Created Github repo, set up the README.MD and .gitignore
-2. Set up local virtual hosts for dev, one for app src and one for dist *same project root folder
+2. Set up local virtual hosts for dev, one for app src and one for dist *same project root 
+3. Set up node package.json, bower.json, .bowerc. I have added the packagaes and libs I know I will need however this will probabaly get added to, I will explain all the packages at the end of the test
