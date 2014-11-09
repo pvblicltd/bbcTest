@@ -1,0 +1,19 @@
+{
+  "name": "PvblicBBCTest",
+  "version": "0.0.1",
+  "dependencies": {
+    "modernizr": "latest",
+    "jquery": "latest",
+    "jquery-migrate": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "bootstrap-sass-official": "latest",
+    "angular-ui-bootstrap": "latest",
+    "angular-ui-router": "latest",
+    "angular-ui-utils": "latest",
+    "angular-ui-calendar": "latest",
+    "angular-ui-router.stateHelper": "latest",
+    "userapp-angular": "latest"
+  },
+  "private": true 
+}

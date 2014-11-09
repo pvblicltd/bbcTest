@@ -10,7 +10,6 @@ bbcTest.sublime-workspace
 
 ## logs
 
-app-src/logs_access
 app-src/logs_errors
 
 dist/logs_access
@@ -24,3 +23,5 @@ dist/logs_errors
 ############################################
 
 #node modules
+
+node_modules
