@@ -1,6 +1,26 @@
+/* DOCUMENT INFORMATION
+	- Document: Pvblic Ltd
+	- Version:  0.0.1
+	- Client:   BBC
+	- Author:   James A B Gray   
+*/
+
+/* ===Settings === */
 @import "settings/variables";
 
-/* Import Bootsrap */
+/* ===Bootstrap === */
 @import "bootstrap";
 
-/* Import Parts */
+/* ===Mixins === */
+
+/* ===Directives === */
+
+/* directives/dir_edit_user_image.js */
+@import "directives/dir_edit_user_image";
+
+/* ===Common === */
+@import "common/nav";
+@import "common/sidebar";
+
+/* ===Public === */
+@import "public/login_process";

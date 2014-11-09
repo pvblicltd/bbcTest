@@ -10,12 +10,49 @@
     <!-- /build -->
 </head>
 <body>
-    <div id="wrapper" ng-class="{toggled: user.authenticated}">
+    <div id="wrapper" ng-class="{toggled: !user.authenticated}">
+        <div id="sidebar-wrapper">
+            <ul ng-cloak class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#/dash">
+                        <img class="img-responsive" src="assets/img/inhaus_logo_blue.png" />
+                    </a>
+                </li>
+                <li class="avatar">
+                    <a href="#/my-account">My Account</a>
+                    <img class="img-responsive" ng-src="{{avatar_url}}" />
+                </li>
+                <li>
+                    <a href="#" ua-logout><i class="fa fa-sign-out fa-fw"></i>&nbsp; Log Out</a>
+                </li>
+            </ul>
+        </div>
         <div id="page-content-wrapper">
             <div class="page-content">
                 <!-- top info bar -->
                 <div class="top-bar-wrapper" ng-class="{toggled: user.authenticated}">
-                
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="top_info_bar">
+                                        <div class="row">
+                                            <!-- Info -->
+                                            <div class="col-md-6">
+                                                <div clock-widget></div>
+                                                <div location-widget></div>
+                                                <div weather-widget></div>
+                                            </div>
+                                            <!-- Weather -->
+                                            <div class="col-md-4">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">

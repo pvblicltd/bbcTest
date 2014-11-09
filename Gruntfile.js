@@ -1,3 +1,10 @@
+/* DOCUMENT INFORMATION
+  - Document: Pvblic Ltd
+  - Version:  0.0.1
+  - Client:   BBC
+  - Author:   James A B Gray   
+*/
+
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),

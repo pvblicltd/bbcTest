@@ -14,3 +14,7 @@ Please create a page (or a “widget” that we can embed into other pages) wher
 6. Set up basic angular.js app-src structure and initial index.html
 7. Ran npm install and grunt on the angular-ui-bootsrap vendor lib. Updated the git ignore to include the libs node_mdules - made a note to describe in set up process doc
 8. Took Short Break (it is Sunday after all) :-)
+9. Set Up custom user on userapp.io *Creates an easy login process and availablity to avatar image data field through an Angular.js service. 
+10. Set up the news scss file structure creted relevant empty files
+11. Created new angular.js directive for editing user image *Widgetizes the js within angular as is the supporting template.html and sass file.
+12. Added some markup to the index.html to include a sidebar
