@@ -1,0 +1,24 @@
+<centered>
+	<div class="row row-centered">
+		<div class="col-lg-3 col-centered login-holder">
+			<div class="panel panel-default">
+			 	<div class="panel-body">
+			 		<img class="img-responsive" src="assets/img/inhaus_logo_blue.png" />
+			 		<br/>
+					<form ua-login role="form">
+						<div class="form-group">
+							<input class="form-control" name="login" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<input class="form-control" name="password" placeholder="Password" type="password">
+						</div>
+						<p ng-show="!loading"><button type="submit" class="btn btn-primary">Log in</button></p>
+						<p ng-show="loading"><button type="submit" class="btn btn-primary" disabled="disabled"><i class="fa fa-spinner"></i></button></p>
+						<div class="alert alert-danger alert-dismissible" role="alert" ng-show="error">{{ error.message }}</div>
+					</form>
+					<p><a href="#/reset-password">Forgot password?</a></p>
+			 	</div>
+			</div>
+		</div>
+	</div>
+</centered>

@@ -11,7 +11,6 @@
     "angular-ui-bootstrap": "latest",
     "angular-ui-router": "latest",
     "angular-ui-utils": "latest",
-    "angular-ui-calendar": "latest",
     "angular-ui-router.stateHelper": "latest",
     "userapp-angular": "latest"
   },

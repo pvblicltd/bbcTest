@@ -1,0 +1,21 @@
+<centered>
+	<div class="row row-centered">
+		<div class="col-lg-3 col-centered login-holder">
+			<div class="panel panel-default">
+			 	<div class="panel-body">
+			 		<img class="img-responsive" src="assets/img/inhaus_logo_blue.png" />
+			 		<br/>
+					<div ng-show="!error">
+						<div class="alert alert-info alert-dismissible" role="alert"  ng-show="loading">
+							Verifying your email address, please wait...
+						</div>
+						<div class="alert alert-success alert-dismissible" role="alert" ng-show="!loading">
+							Your email address has been verified, <a href="#/login">click here</a> to log in.
+						</div>
+					</div>
+					<div class="alert alert-danger alert-dismissible" role="alert" ng-show="error">{{ error.message }}</div>
+			 	</div>
+			</div>
+		</div>
+	</div>
+</centered>
