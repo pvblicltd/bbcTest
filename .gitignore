@@ -1,6 +1,26 @@
-#ignore sublime text project files
+##
+## James A B Gray local ignores
+##
+############################################
+
+## Ignore sublime text project files
 
 bbcTest.sublime-project
 bbcTest.sublime-workspace
 
-#ignore node modules
+## logs
+
+app-src/logs_access
+app-src/logs_errors
+
+dist/logs_access
+dist/logs_errors
+
+
+
+## 
+## Project ignores
+## 
+############################################
+
+#node modules
