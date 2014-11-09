@@ -12,3 +12,4 @@ Please create a page (or a “widget” that we can embed into other pages) wher
 4. Installed vendor packages via bower.json, doing a commit to show vendor packages
 5. Set up initial gruntfile, added asset folders to app-src and dist *grunt gernerates the dist assets
 6. Set up basic angular.js app-src structure and initial index.html
+7. Ran npm install and grunt on the angular-ui-bootsrap vendor lib. Updated the git ignore to include the libs node_mdules - made a note to describe in set up process doc 

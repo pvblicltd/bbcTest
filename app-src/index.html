@@ -10,7 +10,21 @@
     <!-- /build -->
 </head>
 <body>
-    
+    <div id="wrapper" ng-class="{toggled: user.authenticated}">
+        <div id="page-content-wrapper">
+            <div class="page-content">
+                <!-- top info bar -->
+                <div class="top-bar-wrapper" ng-class="{toggled: user.authenticated}">
+                
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                         <div ng-view></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	<!-- build:script app -->
 	<!-- vendor scripts -->
     <script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
@@ -30,20 +44,20 @@
     <script type="text/javascript" src="app.js"></script>
 
     <!-- directives -->
-
+    <script type="text/javascript" src="directives/dir_util_centered.js"></script>
     <!-- services -->
 
     <!-- filters -->
-    <script type="text/javascript" src="filters/avatar_null.js"></script>
+    <script type="text/javascript" src="filters/fltr_avatar_null.js"></script>
 
     <!-- controllers -->
-    
     <!-- common -->
+    <script type="text/javascript" src="controllers/common/ctrl_dash.js"></script>
+    <script type="text/javascript" src="controllers/common/ctrl_my_account.js"></script>
 
     <!-- admin -->
 
     <!-- /build -->
-
 
 </body>
 </html>

@@ -1,0 +1,98 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<!-- Notifications -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+		    		<h2 class="panel-title"><i class="fa fa-bullhorn"></i>&nbsp; Overview</h2>
+		  		</div>
+			 	<div class="panel-body">
+			 	</div>
+			 </div>
+		</div>
+	</div>
+	<div class="row">
+		<!-- Pannel 1 -->
+		<div class="col-md-12">
+			<!-- Bookings Dash Widget -->
+			<div class="panel panel-default" ng-cloak  ng-controller="dashBookings">
+				<div class="panel-heading">
+		    		<h2 class="panel-title"><i class="fa fa-clock-o"></i>&nbsp; Today's Bookings</h2>
+		  		</div>
+			 	<div class="panel-body">
+			 		<div class="row collapsed">
+			 			<div class="col-md-6">
+			 				<!-- Photographer list -->
+		 					<ul id="booking_dash_photographer_list">
+		 						<li 
+		 						ng-repeat="photographer in photographers"
+		 						ng-class="{selected: photographer == isSelected}"
+		 						ng-click="viewPhotgrapherBookings(photographer)"
+		 						>
+		 							<img
+		 							ng-src="{{photographer.properties.avatar.value | noAvatar}}"
+		 							/>
+		 							<span>{{ photographer.first_name}}</span>
+		 						</li>
+		 					</ul>
+		 					<!-- bookings list -->
+			 				<table datatable="ng" dt-options="dtOptions" dt-columns="dtColumns" class="row-border hover">
+						        <thead>
+						        <tr>
+						            <th>Time</th>
+						            <th>Client</th>
+						            <th>Address</th>
+						        </tr>
+						        </thead>
+						        <tbody class="camel_case">
+						        <tr 
+						        ng-repeat="booking in bookings"
+						        ng-click="viewBookingInfo(booking)"
+						        ng-class="{selected: booking == bookingSelected}"
+						        >
+						            <td>{{ (booking.time * 1000) | date: 'HH:mm a'}}</td>
+						            <td>{{ booking.client.suffix }} {{ booking.client.firstName }} {{ booking.client.lastName }}</td>
+						            <td>{{ booking.address.address1 }}, <span ng-if="booking.address.address2">{{booking.address.address2}}, </span>{{booking.address.city}}, {{booking.address.zip}}</td>
+						        </tr>
+						        </tbody>
+						    </table>							
+			 			</div>
+			 			<div class="col-md-6">
+			 				<div class="row collapsed">
+					 			<div class="col-md-3">
+					 				<div class="panel panel-default">
+										<div class="panel-heading">
+								    		<h2 class="panel-title">Booking Details</h2>
+								  		</div>
+								  		<div class="panel-body">
+								  			{{longTest}}
+								  		</div>
+								  	</div>
+					 			</div>
+					 			<div class="col-md-3">
+					 				<div class="panel panel-default">
+										<div class="panel-heading">
+								    		<h2 class="panel-title">Directions</h2>
+								  		</div>
+								  		<div class="panel-body">
+								  			{{longTest}}
+								  		</div>
+								  	</div>
+					 			</div>
+					 			<div id="bookingMapHolder" class="col-md-6">
+					 				<ui-gmap-google-map
+					 					control="map.control"
+					 					center="map.center" 
+					 					zoom="map.zoom">
+					 				</ui-gmap-google-map>
+					 			</div>
+					 		</div>
+			 			</div>
+			 		</div>
+			 	</div>
+			 </div>
+		</div>
+		<!-- Panel 2 -->
+		
+	</div>
+</div>

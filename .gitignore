@@ -25,3 +25,4 @@ dist/logs_errors
 #node modules
 
 node_modules
+app-src/vendor/angular-ui-bootstrap/node_modules

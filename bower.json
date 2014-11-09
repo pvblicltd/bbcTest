@@ -12,6 +12,7 @@
     "angular-ui-router": "latest",
     "angular-ui-utils": "latest",
     "angular-ui-router.stateHelper": "latest",
+    "angular-resource": "latest",
     "userapp-angular": "latest"
   },
   "private": true 
