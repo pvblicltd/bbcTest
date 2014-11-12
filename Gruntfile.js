@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
         },
         files: {
-          'app-src/assets/css/<%= pkg.name %>.css': 'app-src/assets/sass/global.scss'
+          'app-src/assets/css/style.css': 'app-src/assets/sass/global.scss'
         }        
       }
     },
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
             app: 'dist/assets/js/<%= pkg.name %>.js'
           },  
           styles: {
-            main: 'dist/assets/css/<%= pkg.name %>.css'
+            main: 'dist/assets/css/style.css'
           }
         }
       }

@@ -75,8 +75,12 @@ html {
 		height: $page-top-bar-height;
 		#top-bar-side-wdith {
 			width: 100%;
-			@media (min-width: $screen-sm-min) {
-			width: $sidebar-lg-width;
+			@media (min-width: $container-sm) {
+				width: $sidebar-md-width;
+				max-width: $sidebar-md-width;
+			}
+			@media (min-width: $container-lg) {
+				width: $sidebar-lg-width;
 			}
 		}
 	}
@@ -84,27 +88,34 @@ html {
 	#sidebar-wrapper {
 		width: 0px;
 		top: $page-top-bar-height;
-		@media (min-width: $screen-sm-min) {
+		@media (min-width: $container-sm) {
+			width: $sidebar-md-width;
+		}
+		@media (min-width: $container-md) {
 			width: $sidebar-lg-width;
 		}
 	}
 	#sidebar-wrapper.openOveride {
-		width: 100%;
-		@media (min-width: $screen-sm-min) {
+		width: 90%;
+		max-width: $sidebar-lg-width;
+		@media (min-width: $container-sm) {
 			width: 0px;
 		}
 	}
 	#page-content-wrapper {
 		margin: $page-top-bar-height 0 0 0;
 		padding-top: 20px;
-		@media (min-width: $screen-sm-min) {
+		@media (min-width: $container-sm) {
+			margin: $page-top-bar-height 0 0 $sidebar-md-width;
+		}
+		@media (min-width: $container-lg) {
 			margin: $page-top-bar-height 0 0 $sidebar-lg-width;
 		}
 	}
 	#page-content-wrapper.openOveride {
 		margin: $page-top-bar-height 0 0 0;
 		padding-top: 20px;
-		@media (min-width: $screen-sm-min) {
+		@media (min-width: $container-sm) {
 			margin: $page-top-bar-height 0 0 0;
 		}
 	}
