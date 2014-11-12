@@ -13,7 +13,25 @@ The app-src version can be [found here](http://pvblic.co/sandbox/bbctest/app-src
 #### Login Details
 
 user: *bbc@pvblic.co*
+
 pass: *Creative1*
+
+
+## Solution
+
+I decided to go with an angular js app, with the key functionality wrapped up in a dreictive. This would allow thye caode to be ported throughout the Angular app as well as beinga able to be ported into a singlular angular js app, compiled and served through an iframe/loading script as a site widget.
+
+## Approach
+
+I utilised bootstrap (sass build) and grunt to run a watch and bvuild process, all vendor scripts are loaded through bower and npm. All animations are css utilsiing the ng-class to fire.
+
+All code is neatly named and orgainsed into modules as demonstrated in /app-src/*
+
+
+## Limitations
+
+This app is IE10+ as it ustilises canvas for the image cropper, however with more time a backwards compatible solution would have to be added.
+
 
 ## Process
 
@@ -34,4 +52,5 @@ pass: *Creative1*
 15. Created the respective sass files
 16. Created the edit_user_image directive
 17. Tried a few AngularJS upload and crop directives, chose the HTML5, CANVAS ones a proof concept
-18. 
+18. Creted the the previous 
+19. 
