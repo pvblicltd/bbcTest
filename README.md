@@ -25,7 +25,9 @@ I decided to go with an angular js app, with the key functionality wrapped up in
 
 I utilised bootstrap (sass build) and grunt to run a watch and bvuild process, all vendor scripts are loaded through bower and npm. All animations are css utilsiing the ng-class to fire.
 
-All code is neatly named and orgainsed into modules as demonstrated in /app-src/*
+All code is neatly named and orgainsed into modules as demonstrated in /app-src/*.
+
+/dist/* is the compiled versionb of the app created by the gruntfile. The grunt build task cretes a new index.html with contacted and uglified scripts.
 
 
 ## Limitations
@@ -51,6 +53,12 @@ This app is IE10+ as it ustilises canvas for the image cropper, however with mor
 14. Created a standard sidebar, topbar layout that animates in on login
 15. Created the respective sass files
 16. Created the edit_user_image directive
-17. Tried a few AngularJS upload and crop directives, chose the HTML5, CANVAS ones a proof concept
-18. Creted the the previous 
-19. 
+17. Tried a few AngularJS upload and crop directives, chose the HTML5 & CANVAS solutions as proof concept
+18. Created the previous avatars 
+19. Created the crop area 
+20. Created the upload method
+21. Did some touch work and fixed a problem with the crop plugin
+22. Updated Gruntfile to concat the scripts
+23. Tested the grunt build and adjusted the uglify setting to avoid errors
+24. Tweaked some of the media queries
+25. Deployed on the server
