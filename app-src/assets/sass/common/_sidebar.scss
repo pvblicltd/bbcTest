@@ -10,15 +10,15 @@
     .title {
         display: block;
         float: left;
-        margin: 10px 0 0 8px;
+        margin: 8px 0 0 8px;
         font-size: $font-size-h2;
     }
 
     #top-bar-mobile-menu-open {
         float: right;
         display: block;
-        margin: 8px 8px 0 0;
-        font-size: $font-size-h3;
+        margin: 7px 8px 0 0;
+        font-size: $font-size-h2;
         cursor: pointer;
         .fa-indent {
             display: block;

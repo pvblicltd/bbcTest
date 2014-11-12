@@ -5205,13 +5205,13 @@ html {
 #top-bar-side-wdith .title {
   display: block;
   float: left;
-  margin: 10px 0 0 8px;
+  margin: 8px 0 0 8px;
   font-size: 30px; }
 #top-bar-side-wdith #top-bar-mobile-menu-open {
   float: right;
   display: block;
-  margin: 8px 8px 0 0;
-  font-size: 24px;
+  margin: 7px 8px 0 0;
+  font-size: 30px;
   cursor: pointer; }
   #top-bar-side-wdith #top-bar-mobile-menu-open .fa-indent {
     display: block; }
