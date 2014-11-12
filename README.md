@@ -19,15 +19,15 @@ pass: *Creative1*
 
 ## Solution
 
-I decided to go with an angular js app, with the key functionality wrapped up in a dreictive. This would allow thye caode to be ported throughout the Angular app as well as beinga able to be ported into a singlular angular js app, compiled and served through an iframe/loading script as a site widget.
+I decided to go with an angular js app, with the key functionality wrapped up in a directive. This would allow thye code to be ported throughout the Angular app as well as being able to be ported into a singlular angular js app, compiled and served through an iframe/loading script as a site widget.
 
 ## Approach
 
-I utilised bootstrap (sass build) and grunt to run a watch and bvuild process, all vendor scripts are loaded through bower and npm. All animations are css utilsiing the ng-class to fire.
+I utilised bootstrap (sass build) and grunt to run a watch and build process, all vendor scripts are loaded through bower and npm. All animations are css utilsiing the ng-class to fire.
 
 All code is neatly named and orgainsed into modules as demonstrated in /app-src/*.
 
-/dist/* is the compiled versionb of the app created by the gruntfile. The grunt build task cretes a new index.html with contacted and uglified scripts.
+/dist/* is the compiled version of the app created by the gruntfile. The grunt build task cretes a new index.html with contacted and uglified scripts.
 
 
 ## Limitations
