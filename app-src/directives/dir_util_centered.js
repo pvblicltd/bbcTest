@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module("util-centered", []).directive("centered", function() {
+angular.module("utilCentered", []).directive("centered", function() {
   return {
 		restrict : "E",
 		transclude : true,

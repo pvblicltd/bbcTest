@@ -2,6 +2,7 @@
 
 angular.module('PvblicBBCTest')
 .controller('dash', 
-['$scope', 'ENV', function($scope, ENV) {
- 
+['$scope', function($scope) {
+ 	
+ 	
 }]);

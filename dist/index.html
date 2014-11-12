@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" ng-app="PvblicBBCTest">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Pvblic Ltd - BBC Test</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="assets/css/PvblicBBCTest.css" />
+</head>
+
+<body>
+    <div id="wrapper" ng-class="{toggled: user.authenticated}">
+        <!-- Top info bar -->
+        <div id="top-bar-wrapper">
+            <div id="top-bar-side-wdith">
+                <h1 class="title"><img src="http://static.bbci.co.uk/frameworks/barlesque/2.75.0/orb/4/img/bbc-blocks-light.png" width="84" height="24" alt="BBC"><small><em>&nbsp;Team Apps</em></small></h1>
+                <span ng-click="menuActive = !menuActive" id="top-bar-mobile-menu-open" ng-init="isActive = false" ng-class="{openOveride: menuActive}">
+                    <i class="fa fa-indent"></i>
+                    <i class="fa fa-outdent"></i>
+                </span>
+            </div>
+            <div id="top-bar-container">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sidebar-wrapper" ng-class="{openOveride: menuActive}">
+            <!-- Edit User Image Directive -->
+            <div edit-user-image></div>
+            <!-- Sidenav Menu -->
+            <ul ng-cloak class="sidebar-nav">
+                <li>
+                    <a href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Menu Item</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-clock-o fa-fw"></i>&nbsp; Menu Item</a>
+                </li>
+            </ul>
+        </div>
+        <!-- View Port -->
+        <div id="page-content-wrapper" ng-class="{openOveride: menuActive}">
+            <div class="container-fluid" ng-view></div>
+        </div>
+    </div>
+    <div ng-show="user.authenticated" class="fader-bg"></div>
+    <script type="text/javascript" src="assets/js/PvblicBBCTest.js"></script>
+
+</body>
+
+</html>

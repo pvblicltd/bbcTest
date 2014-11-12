@@ -18,3 +18,9 @@ Please create a page (or a “widget” that we can embed into other pages) wher
 10. Set up the news scss file structure creted relevant empty files
 11. Created new angular.js directive for editing user image *Widgetizes the js within angular as is the supporting template.html and sass file.
 12. Added some markup to the index.html to include a sidebar
+13. Added internal comms branded message at login (this is taken from the biref that I would be working on an internal comms page)
+14. Created a standard sidebar, topbar layout that animates in on login
+15. Created the respective sass files
+16. Created the edit_user_image directive
+17. Tried a few AngularJS upload and crop directives, chose the HTML5, CANVAS ones a proof concept
+18. 

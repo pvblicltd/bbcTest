@@ -7,13 +7,16 @@
     "jquery-migrate": "latest",
     "angular": "latest",
     "angular-route": "latest",
-    "bootstrap-sass-official": "latest",
+    "bootstrap-sass-official": "~3.2.0",
     "angular-ui-bootstrap": "latest",
     "angular-ui-router": "latest",
     "angular-ui-utils": "latest",
     "angular-ui-router.stateHelper": "latest",
     "angular-resource": "latest",
-    "userapp-angular": "latest"
+    "userapp-angular": "latest",
+    "aws-sdk-js": "latest",
+    "ngImgCrop" : "latest",
+    "ng-flow": "latest"
   },
   "private": true 
 }

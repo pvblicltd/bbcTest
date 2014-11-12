@@ -1,0 +1,57 @@
+<div id="edit-avatar-container"
+	flow-init="{target: 'uploads'}"
+	flow-file-added="uploadSuccess($file) "
+ >
+
+	<!-- Avatar Holder Menu -->
+	<div id="avatar_container">
+	    <span ng-click="editAvatar = !editAvatar" >Edit Avatar</span>
+	    <img class="img-responsive" ng-src="{{avatar_url}}" />
+	</div>
+	<div id="cropped_avatar" ng-class="{editOpen: !editAvatar}">
+		<img class="img-responsive" ng-src="{{myCroppedImage}}" />
+	</div>
+	<!-- Personal Menu -->
+	<ul id="personal_menu">
+		<li><a href="#/dash"><i class="fa fa-tachometer fa-fw"></i>&nbsp;Dash</a></li>
+		<li><a href="#/my-account"><i class="fa fa-user fa-fw"></i>&nbsp;My Account</a></li>
+		<li><a href="#" ua-logout><i class="fa fa-sign-out fa-fw"></i>&nbsp;Log Out</a></li>
+	</ul>
+	<!-- Epanded Edit Image -->
+	<div id="avatar-editor" ng-class="{editOpen: !editAvatar}">
+		<span class="section-title lg">
+			Edit Avatar
+			<span ng-click="editAvatar = !editAvatar">X</span>
+		</span>
+		
+		<!-- Crop Image -->
+		<div class="cropArea">
+			<img-crop image="myImage" result-image="myCroppedImage"></img-crop>
+		</div>
+
+		<!-- Save Image -->
+		<div id="save-avatar-cont">
+			
+		</div>
+
+		<!-- Upload new image -->
+		<div id="avatar-upload-file">
+			<span class="btn btn-primary" ng-show="!$flow.files.length" flow-btn><i class="fa fa-cloud-upload"></i>&nbsp;Upload New Image</span>
+			<span class="save-avatar btn btn-success"><i class="fa fa-star"></i>&nbsp;Save</span>
+			<span class="btn btn-info" ng-show="$flow.files.length" flow-btn>Change</span>
+			<span class="btn btn-danger" ng-show="$flow.files.length"
+			 ng-click="$flow.cancel()">
+			Remove
+			</span>
+
+			<span class="instructions">Only PNG,GIF,JPG,JEPG files allowed.</span>
+		</div>
+		<!-- Old Avatar List -->
+		<span class="section-title"><i class="fa fa-picture-o"></i>&nbsp;Choose Previous</span>
+		<ul id="existing-avatars">
+			<li ng-repeat="avatar in oldAvatrs">
+					<img ng-click="updateCrop(avatar)" class="img-responsive" ng-src="{{avatar}}" />
+			</li>
+		</ul>
+	</div>
+</div>

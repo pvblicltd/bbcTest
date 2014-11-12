@@ -1,0 +1,22 @@
+// Body font
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+h1, h2, h3, h4, h5 {
+	color: $brand-primary;
+	font-weight: normal;
+}
+
+// Title h1 (includes image)
+h1.title {
+	margin: 0 0 0 0;
+	line-height: 26px;
+	* {
+		vertical-align: top;
+	}
+	small {
+		color: #fff;
+		* {
+			vertical-align: top !important;
+		}
+	}
+}

@@ -16,10 +16,10 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          outputStyle: 'compressed'
+
         },
         files: {
-          'app-src/assets/css/style.css': 'app-src/assets/sass/global.scss'
+          'app-src/assets/css/<%= pkg.name %>.css': 'app-src/assets/sass/global.scss'
         }        
       }
     },
@@ -30,11 +30,24 @@ module.exports = function(grunt) {
           'app-src/vendor/jquery/dist/jquery.min.js',
           'app-src/vendor/jquery-migrate/jquery-migrate.min.js',
           'app-src/vendor/modernizr/modernizr.js',
+          'app-src/vendor/flow.js/src/flow.js',
           'app-src/vendor/angular/angular.js',
-          'app-src/vendor/angular-ui-bootstrap/ui-bootstrap-tpls-0.11.2.js',
-          'app-src/app.js'
+          'app-src/vendor/angular-route/angular-route.js',
+          'app-src/vendor/angular-ui-bootstrap/dist/ui-bootstrap-tpls-0.11.2.js',
+          'app-src/vendor/userapp/userapp.client.js',
+          'app-src/vendor/userapp-angular/angularjs.userapp.js',
+          'app-src/vendor/angular-resource/angular-resource.js',
+          'app-src/vendor/ngImgCrop/compile/minified/ng-img-crop.js',
+          'app-src/vendor/ng-flow/dist/ng-flow-standalone.js',
+          'app-src/configs/envConfig.js',
+          'app-src/app.js',
+          'app-src/directives/dir_util_centered.js',
+          'app-src/directives/dir_edit_user_image.js',
+          'app-src/filters/fltr_avatar_null.js',
+          'app-src/controllers/common/ctrl_dash.js',
+          'app-src/controllers/common/ctrl_my_account.js'
+         
         ],
-
         dest: 'dist/assets/js/<%= pkg.name %>.js'
       }
 
@@ -42,14 +55,19 @@ module.exports = function(grunt) {
     // copy the css files over public
     copy: {
       main: {
-        src: 'app-src/assets/css/style.css',
-        dest: 'dist/assets/css/<%= pkg.name %>.css'
+        files: [
+          {expand: true, cwd: 'app-src/vendor/jquery/dist/', src: ['jquery.min.map'], dest: 'dist/assets/js/', filter: 'isFile'}, 
+          {expand: true, cwd: 'app-src/assets/css/', src: ['*'], dest: 'dist/assets/css/', filter: 'isFile'}, 
+          {expand: true, cwd: 'app-src/templates/', src: ['**'], dest: 'dist/templates/'}, 
+          {expand: true, cwd: 'app-src/uploads/', src: ['**'], dest: 'dist/uploads/'}
+        ]
       }
     },
     // Uglify and compress the js
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+         mangle: false
       },
       build: {
         src: 'dist/assets/js/<%= pkg.name %>.js',

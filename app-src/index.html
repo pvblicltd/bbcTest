@@ -5,74 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Pvblic Ltd - BBC Test</title>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
 	<!-- build:style main -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- /build -->
 </head>
 <body>
-    <div id="wrapper" ng-class="{toggled: !user.authenticated}">
-        <div id="sidebar-wrapper">
-            <ul ng-cloak class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#/dash">
-                        <img class="img-responsive" src="assets/img/inhaus_logo_blue.png" />
-                    </a>
-                </li>
-                <li class="avatar">
-                    <a href="#/my-account">My Account</a>
-                    <img class="img-responsive" ng-src="{{avatar_url}}" />
-                </li>
-                <li>
-                    <a href="#" ua-logout><i class="fa fa-sign-out fa-fw"></i>&nbsp; Log Out</a>
-                </li>
-            </ul>
-        </div>
-        <div id="page-content-wrapper">
-            <div class="page-content">
-                <!-- top info bar -->
-                <div class="top-bar-wrapper" ng-class="{toggled: user.authenticated}">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="panel panel-default">
-                                <div class="panel-body">
-                                    <div class="top_info_bar">
-                                        <div class="row">
-                                            <!-- Info -->
-                                            <div class="col-md-6">
-                                                <div clock-widget></div>
-                                                <div location-widget></div>
-                                                <div weather-widget></div>
-                                            </div>
-                                            <!-- Weather -->
-                                            <div class="col-md-4">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div id="wrapper" ng-class="{toggled: user.authenticated}">
+        <!-- Top info bar -->
+        <div id="top-bar-wrapper">
+            <div id="top-bar-side-wdith">
+                <h1 class="title"><img src="http://static.bbci.co.uk/frameworks/barlesque/2.75.0/orb/4/img/bbc-blocks-light.png" width="84" height="24" alt="BBC"><small><em>&nbsp;Team Apps</em></small></h1>
+                <span 
+                ng-click="menuActive = !menuActive" 
+                id="top-bar-mobile-menu-open"
+                ng-init="isActive = false"
+                ng-class="{openOveride: menuActive}"
+                >
+                    <i class="fa fa-indent"></i>
+                    <i class="fa fa-outdent"></i>
+                </span>
+            </div>
+            <div id="top-bar-container">
                 <div class="row">
                     <div class="col-xs-12">
-                         <div ng-view></div>
+    
                     </div>
                 </div>
             </div>
         </div>
+        <div id="sidebar-wrapper" ng-class="{openOveride: menuActive}">
+            <!-- Edit User Image Directive -->
+            <div edit-user-image></div>
+            <!-- Sidenav Menu -->
+            <ul ng-cloak class="sidebar-nav">
+                <li>
+                    <a href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Menu Item</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-clock-o fa-fw"></i>&nbsp; Menu Item</a>
+                </li>
+            </ul>
+        </div>
+        <!-- View Port -->
+        <div id="page-content-wrapper" ng-class="{openOveride: menuActive}">
+            <div class="container-fluid" ng-view></div>
+        </div>
     </div>
+    <div ng-show="user.authenticated" class="fader-bg"></div>
 	<!-- build:script app -->
 	<!-- vendor scripts -->
     <script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="vendor/jquery-migrate/jquery-migrate.min.js"></script>
     <script type="text/javascript" src="vendor/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="vendor/flow.js/src/flow.js"></script>
     <script type="text/javascript" src="vendor/angular/angular.js"></script>
     <script type="text/javascript" src="vendor/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="vendor/angular-ui-bootstrap/dist/ui-bootstrap-tpls-0.11.2.js"></script>
     <script type="text/javascript" src="vendor/userapp/userapp.client.js"></script>
     <script type="text/javascript" src="vendor/userapp-angular/angularjs.userapp.js"></script>
     <script type="text/javascript" src="vendor/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="vendor/ngImgCrop/compile/unminified/ng-img-crop.js"></script>
+    <script type="text/javascript" src="vendor/ng-flow/dist/ng-flow-standalone.js"></script>
+
+    
+    
 
     <!-- configs -->
     <script type="text/javascript" src="configs/envConfig.js"></script>
@@ -82,6 +79,8 @@
 
     <!-- directives -->
     <script type="text/javascript" src="directives/dir_util_centered.js"></script>
+    <script type="text/javascript" src="directives/dir_edit_user_image.js"></script>
+    
     <!-- services -->
 
     <!-- filters -->

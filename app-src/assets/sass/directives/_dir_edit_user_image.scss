@@ -4,3 +4,169 @@
 	- Client:   BBC
 	- Author:   James A B Gray   
 */
+#edit-avatar-container {
+	position: relative;
+	/* ===Avatar Image & Edit Rollover === */
+	#avatar_container {
+		margin: 10px 0 0 10px;
+		width: 85px;
+	    height: 85px;
+	    padding: 0;
+	    display: inline-block;
+	    // No border radius mixin with Bootsrap
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    border-radius: 50%;
+	    overflow: hidden;
+	    position: relative;
+	    vertical-align: top;
+	    img {
+	        position: relative;
+	        z-index: 0;
+	    }
+
+	    span {
+	        position: absolute;
+	        z-index: 1;
+	        cursor: pointer;
+	        font-size: 12px;
+	        text-align: center;
+	        height: 0px;
+	        width: 90px;
+	        line-height: 90px;
+	        vertical-align: middle;
+	        background: $trans-gray;
+	        @include transition(all ease 0.5s);
+	        bottom: 0px;
+	       
+	    }
+
+	    span:hover {
+	        text-decoration: none;
+	        color: #fff;
+	        background: $trans-gray;
+	    }
+	}
+	#avatar_container:hover {
+	    
+	    span {
+	        height: 90px;
+	    }
+	}
+
+	#cropped_avatar {
+		position: absolute;
+		width: 85px;
+	    height: 85px;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    border-radius: 50%;
+	    z-index: 100;
+	    overflow: hidden;
+	    top: 10px;
+	    left: 10px;
+	    @include transition(all ease 0.5s);
+	    display: none;
+	}
+
+	#cropped_avatar.editOpen {
+		display: block;
+	}
+
+	/* ===Personal Menu === */
+	#personal_menu {
+		list-style: none;
+		margin: 14px 0 0 20px;
+		padding: 0;
+		display: inline-block;
+		vertical-align: top;
+		li {
+			margin-bottom: 8px;
+			@include transition(all ease 0.2s);
+			a:hover {
+				text-decoration: none;
+			}
+		}
+		li:nth-child(1),  li:nth-child(3){
+			margin-left: -8px;
+		}
+		li:nth-child(1):hover,  li:nth-child(3):hover {
+			margin-left: 0px;
+		}
+		li:nth-child(2):hover {
+			margin-left: 8px;
+		}
+	}
+
+	/* ===Avatar Editor === */
+	#avatar-editor {
+		border-left: solid $black 10px;
+		border-right: solid $black 10px;
+		background: $black;
+		@include transition(all ease 0.5s);
+		margin: 10px 0 0 0;
+		height: 0px;
+		overflow: hidden;
+		vertical-align: top;
+		@include opacity(0);
+
+		span.section-title {
+			padding: 0 0 0 0;
+		}
+
+		#save-avatar-cont {
+			text-align: right;
+			span.save-avatar {
+				margin: 0;
+
+			}
+		}
+
+		// Croped area
+		.cropArea {
+			overflow: hidden;
+			width: 100%;
+			height: 280px;
+			text-align: center;
+			background: url(../img/ph_bg.jpg);
+		}
+
+		#avatar-upload-file {
+			//text-align: center;
+			margin-top: 10px;
+			.instructions {
+				margin-top: 10px;
+				display: block;
+				font-size: $font-size-small;
+			}
+		}
+
+		#existing-avatars {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			width: 100%;
+			position: relative;
+			background: $black;
+			// Equal widths (very sexy up to 3)
+			li {
+				vertical-align: top;
+				@include rowMachine(3, 3%);
+				display: inline-block;
+				img {
+					display: block;
+					cursor: pointer;
+				}
+
+				img:hover {
+					@include opacity(0.5);
+				}
+			}
+		}
+	}
+	#avatar-editor.editOpen {
+		height: auto;
+		@include opacity(1);
+	}
+}
+

@@ -1,0 +1,71 @@
+/* DOCUMENT INFORMATION
+  - Document: Pvblic Ltd
+  - Version:  0.0.1
+  - Client:   BBC
+  - Author:   James A B Gray   
+*/
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+    margin: 0 0px;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+}
+
+.angular-center-container {
+  position: fixed;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	display:table;
+    z-index: 1;
+}
+
+.angular-centered {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.panel {
+    border: 0;
+}
+
+.no-gutter {
+    padding-left:0;
+    padding-right:0;
+}
+.no-gutter-right {
+    padding-right:0;
+}
+
+.panel {
+    margin-bottom: 10px;
+}
+
+
+.row.collapsed {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.collapsed [class*='col-']:not(:first-child),
+.row.collapsed [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+/*
+
+a:after {
+    content:' \2192';
+    margin-left: 3px;
+}
+
+*/

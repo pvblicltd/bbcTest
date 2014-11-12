@@ -12,7 +12,9 @@ angular.module('PvblicBBCTest', [
 	'ui.bootstrap',
 	'ngRoute',
 	'UserApp',
-	'util-centered',
+	'utilCentered',
+	'editUserImageMod',
+	'flow',
 	'ngResource'
 ]).
 config(['$routeProvider', function($routeProvider) {

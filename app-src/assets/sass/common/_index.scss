@@ -1,0 +1,128 @@
+/* DOCUMENT INFORMATION
+	- Document: Pvblic Ltd
+	- Version:  0.0.1
+	- Client:   BBC
+	- Author:   James A B Gray   
+*/
+
+// Messaging background image would be dynamic
+
+html {
+	background-image: url(../img/Children-in-Need-2014.jpg);
+	background-size: cover;
+	background-position: top center;
+	height:  100%;
+}
+
+/* ===NAV CONTAINER ANIMS & SIZES === */
+
+#wrapper {
+	@include transition(all linear 0.5s);
+}
+#wrapper {
+	position: relative;
+	width: 100%;
+
+    /* ===Topbar === */
+	#top-bar-wrapper {
+		height: 0px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 999;
+		overflow: hidden;
+		background-color: $trans-gray;
+		@include transition(all linear 0.5s);
+
+	    #top-bar-side-wdith {
+	    	width: $sidebar-lg-width;
+	    	position: relative;
+	    	float: left;
+	    	height: 40px;
+	    	background: $black;
+	    }
+	}
+
+	/* ===Sidebar === */
+	#sidebar-wrapper {
+		width: 0px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background-color: $trans-gray;
+		overflow-y: auto;
+		overflow-x: hidden;
+		z-index: 999;
+		@include transition(all linear 0.5s);
+	}
+	
+	/* ===Content === */
+	#page-content-wrapper {
+		margin: 0 0 0 0;
+		position: relative;
+		z-index: 998;
+		@include transition(all linear 0.5s);
+	}
+		
+}
+
+// Toggled 
+#wrapper.toggled {
+	/* ===Topbar === */
+	#top-bar-wrapper {
+		height: $page-top-bar-height;
+		#top-bar-side-wdith {
+			width: 100%;
+			@media (min-width: $screen-sm-min) {
+			width: $sidebar-lg-width;
+			}
+		}
+	}
+	/* ===Sidebar === */
+	#sidebar-wrapper {
+		width: 0px;
+		top: $page-top-bar-height;
+		@media (min-width: $screen-sm-min) {
+			width: $sidebar-lg-width;
+		}
+	}
+	#sidebar-wrapper.openOveride {
+		width: 100%;
+		@media (min-width: $screen-sm-min) {
+			width: 0px;
+		}
+	}
+	#page-content-wrapper {
+		margin: $page-top-bar-height 0 0 0;
+		padding-top: 20px;
+		@media (min-width: $screen-sm-min) {
+			margin: $page-top-bar-height 0 0 $sidebar-lg-width;
+		}
+	}
+	#page-content-wrapper.openOveride {
+		margin: $page-top-bar-height 0 0 0;
+		padding-top: 20px;
+		@media (min-width: $screen-sm-min) {
+			margin: $page-top-bar-height 0 0 0;
+		}
+	}
+}
+
+
+// Background Anim
+.fader-bg {
+	position: fixed;
+	z-index: 0;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: rgba(0, 0, 0, 0.5);
+	@include transition(all linear 1s);
+}
+
+.fader-bg.ng-hide {
+	@include opacity(0);	
+}
