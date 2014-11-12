@@ -49,13 +49,18 @@ html {
 		width: 0px;
 		position: fixed;
 		top: 0;
-		left: 0;
+		right: 0;
 		bottom: 0;
 		background-color: $trans-gray;
 		overflow-y: auto;
 		overflow-x: hidden;
 		z-index: 999;
 		@include transition(all linear 0.5s);
+		@media (min-width: $container-sm) {
+			left: 0;
+			right: auto;
+		}
+
 	}
 	
 	/* ===Content === */
@@ -96,8 +101,7 @@ html {
 		}
 	}
 	#sidebar-wrapper.openOveride {
-		width: 90%;
-		max-width: $sidebar-lg-width;
+		width: 100%;
 		@media (min-width: $container-sm) {
 			width: 0px;
 		}

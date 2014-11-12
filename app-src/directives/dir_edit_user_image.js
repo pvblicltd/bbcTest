@@ -53,42 +53,28 @@ angular.module("editUserImageMod", ['ngImgCrop', 'flow'])
 			$scope.avatar_url = 'https://s3.amazonaws.com/files.parse.com/e8a828cb-7c35-471c-ac64-1d463daed4e7/32923651-05bc-4272-9bca-a05b679a4ad5-1400755401.png';
 
 
-			// 
+			// Set the avatar images
 			$scope.oldAvatrs = [
 				"/uploads/james.jpg",
 				"/uploads/andre.jpg",
 				"/uploads/user.png"
 			];
 
+			$scope.myImage= $scope.oldAvatrs[0];
+		    $scope.myCroppedImage = '';
 
-	$scope.myImage= $scope.oldAvatrs[0];
-    $scope.myCroppedImage = '';
+		    $scope.updateCropHeight = function() {
+			    var theheight = angular.element('.cropArea').find('canvas').height();
+			    angular.element('.cropArea').css({'height': theheight})
+		    }
 
-    var handleFileSelect=function(evt) {
-      var file=evt.currentTarget.files[0];
-      var reader = new FileReader();
-      reader.onload = function (evt) {
-        $scope.$apply(function($scope){
-          $scope.myImage=evt.target.result;
-        });
-      };
-      reader.readAsDataURL(file);
-    };
-    angular.element(document.querySelector('#fileInput')).on('change',handleFileSelect);
-
-			$scope.editAvatar = function(e) {
-				alert('balls');
-				return false;
-			}
-
-			// Start the jcrop
-
+			// cop update on previous image select
 			$scope.updateCrop = function(imgSrc) {
 				$scope.myImage = imgSrc;
 			}
 		  
 		    $scope.uploadSuccess =function(fileObject) {
-		    	console.log(fileObject)
+		    	//console.log(fileObject)
 			  	//$scope.crop.src = fileObject;
 			}
 			/*

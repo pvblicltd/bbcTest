@@ -4985,17 +4985,21 @@ a:after {
     #edit-avatar-container #avatar-editor #save-avatar-cont {
       text-align: right; }
       #edit-avatar-container #avatar-editor #save-avatar-cont span.save-avatar {
-        margin: 0; }
+        margin: 0 0 10px 0;
+        margin-bottom: 10px; }
     #edit-avatar-container #avatar-editor .cropArea {
       overflow: hidden;
       width: 100%;
-      height: 280px;
+      min-height: 200px;
+      height: 200px;
+      padding: 10px;
       text-align: center;
       background: url(../img/ph_bg.jpg); }
     #edit-avatar-container #avatar-editor #avatar-upload-file {
       margin-top: 10px; }
+      #edit-avatar-container #avatar-editor #avatar-upload-file span.btn {
+        margin-bottom: 10px; }
       #edit-avatar-container #avatar-editor #avatar-upload-file .instructions {
-        margin-top: 10px;
         display: block;
         font-size: 12px; }
     #edit-avatar-container #avatar-editor #existing-avatars {
@@ -5089,7 +5093,7 @@ html {
     width: 0px;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
     overflow-y: auto;
@@ -5098,6 +5102,10 @@ html {
     -webkit-transition: all linear 0.5s;
     -o-transition: all linear 0.5s;
     transition: all linear 0.5s; }
+    @media (min-width: 740px) {
+      #wrapper #sidebar-wrapper {
+        left: 0;
+        right: auto; } }
   #wrapper #page-content-wrapper {
     margin: 0 0 0 0;
     position: relative;
@@ -5130,8 +5138,7 @@ html {
       #wrapper.toggled #sidebar-wrapper {
         width: 300px; } }
   #wrapper.toggled #sidebar-wrapper.openOveride {
-    width: 90%;
-    max-width: 300px; }
+    width: 100%; }
     @media (min-width: 740px) {
       #wrapper.toggled #sidebar-wrapper.openOveride {
         width: 0px; } }
