@@ -4,6 +4,17 @@ bbcTest - Profile Picture Changer
 
 Please create a page (or a “widget” that we can embed into other pages) where a user can view their profile picture, upload a new picture to change it, or set their picture back to default.
 
+## Demo
+
+The distributed version can be [found here](http://pvblic.co/sandbox/bbctest/dist/).
+
+The app-src version can be [found here](http://pvblic.co/sandbox/bbctest/app-src/).
+
+#### Login Details
+
+user: *bbc@pvblic.co*
+pass: *Creative1*
+
 ## Process
 
 1. Created Github repo, set up the README.MD and .gitignore
