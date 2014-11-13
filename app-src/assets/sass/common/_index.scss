@@ -82,9 +82,8 @@ html {
 			width: 100%;
 			@media (min-width: $container-sm) {
 				width: $sidebar-md-width;
-				max-width: $sidebar-md-width;
 			}
-			@media (min-width: $container-lg) {
+			@media (min-width: $container-md) {
 				width: $sidebar-lg-width;
 			}
 		}
@@ -112,7 +111,7 @@ html {
 		@media (min-width: $container-sm) {
 			margin: $page-top-bar-height 0 0 $sidebar-md-width;
 		}
-		@media (min-width: $container-lg) {
+		@media (min-width: $container-md) {
 			margin: $page-top-bar-height 0 0 $sidebar-lg-width;
 		}
 	}

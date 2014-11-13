@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           'app-src/vendor/userapp/userapp.client.js',
           'app-src/vendor/userapp-angular/angularjs.userapp.js',
           'app-src/vendor/angular-resource/angular-resource.js',
-          'app-src/vendor/ngImgCrop/compile/minified/ng-img-crop.js',
+          'app-src/vendor/ngImgCrop/compile/unminified/ng-img-crop.js',
           'app-src/vendor/ng-flow/dist/ng-flow-standalone.js',
           'app-src/configs/envConfig.js',
           'app-src/app.js',

@@ -26,7 +26,7 @@
         .fa-outdent {
              display: none;
         }
-        @media (min-width: $screen-sm-min) {
+        @media (min-width: $container-sm) {
             .fa-indent {
             display: none;
             }
@@ -42,7 +42,7 @@
         .fa-outdent {
             display: block;
         } 
-        @media (min-width: $screen-sm-min) {
+        @media (min-width: $container-sm) {
             .fa-indent {
                 display: block;
             }
