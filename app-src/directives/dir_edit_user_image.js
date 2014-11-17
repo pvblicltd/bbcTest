@@ -61,32 +61,23 @@ angular.module("editUserImageMod", ['ngImgCrop', 'flow'])
 			];
 
 			$scope.myImage= $scope.oldAvatrs[0];
-		    $scope.myCroppedImage = '';
+		        $scope.myCroppedImage = '';
 
-		    $scope.updateCropHeight = function() {
+		        $scope.updateCropHeight = function() {
 			    var theheight = angular.element('.cropArea').find('canvas').height();
 			    angular.element('.cropArea').css({'height': theheight})
-		    }
+		        }
 
 			// cop update on previous image select
 			$scope.updateCrop = function(imgSrc) {
 				$scope.myImage = imgSrc;
 			}
 		  
-		    $scope.uploadSuccess =function(fileObject) {
+		    
+                        $scope.uploadSuccess =function(fileObject) {
 		    	//console.log(fileObject)
 			  	//$scope.crop.src = fileObject;
 			}
-			/*
-			$scope.creds = {
-			  bucket: 'pvblicbbtest',
-			  access_key: 'AKIAJKGT5NBXGILGQC5A',
-			  secret_key: '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'
-			}
-			 
-			$scope.policy = 'ewogICJleHBpcmF0aW9uIjogIjIwMjAtMDEtMDFUMDA6MDA6MDBaIiwKICAiY29uZGl0aW9ucyI6IFsKICAgIHsiYnVja2V0IjogInB2YmxpY2JiY3Rlc3QifSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJGtleSIsICIiXSwKICAgIHsiYWNsIjogInByaXZhdGUifSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICIiXSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJGZpbGVuYW1lIiwgIiJdLAogICAgWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsIDAsIDUyNDI4ODAwMF0KICBdCn0=';
-			$scope.signature = 'PDuXqWhQv1Pu9DLi9fL/QwcEEaA=';
-			*/
 			
 
 		}
